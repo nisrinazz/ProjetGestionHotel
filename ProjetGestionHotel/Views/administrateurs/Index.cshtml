@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProjetGestionHotel.Models.administrateur>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_admin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenom_admin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email_admin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tel_admin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.login_admin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mdp_admin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_superadmin)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom_admin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenom_admin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_admin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tel_admin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.login_admin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mdp_admin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_superadmin)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_admin }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_admin }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_admin })
+        </td>
+    </tr>
+}
+
+</table>

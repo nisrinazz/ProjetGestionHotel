@@ -1,0 +1,74 @@
+﻿@model ProjetGestionHotel.Models.administrateur
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>administrateur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenom_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenom_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.login_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.login_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mdp_admin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mdp_admin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_superadmin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_superadmin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_admin }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
